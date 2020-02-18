@@ -74,6 +74,20 @@
   margin: 1rem auto;
   border-radius: 0.2rem;
 }
+.pricing-table .react-toggle {
+  vertical-align: middle;
+}
+.pricing-table label {
+  margin-left: 0.75rem;
+  margin-top: 0.1rem;
+  display: inline-block;
+}
+
+.pricing-table .annual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .q {
   display: inline-block;

@@ -1,49 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments } from "@fortawesome/free-solid-svg-icons";
+import { faComments, faCheck } from "@fortawesome/free-solid-svg-icons";
+import Toggle from "react-toggle";
+import "react-toggle/style.css";
 
-function Pricing() {
+const Pricing = () => {
+  const [annualPricing, setAnnualPricing] = useState(false);
   return (
     <div>
       <ReactTooltip />
       <div className="pricing-table">
-        <div>1</div>
+        <div className="annual">
+          <Toggle
+            id="annual"
+            icons={false}
+            defaultChecked={annualPricing}
+            onChange={event => setAnnualPricing(event.target.checked)}
+          />
+          <label htmlFor="annual">Pay annually</label>
+        </div>
         <div>
           <h2>Indie</h2>
           <div>
             <div>
               <div className="price">
-                <span>$</span>49
+                <span>$</span>
+                {annualPricing ? 39 : 49}
               </div>
               <div className="time">per month</div>
             </div>
           </div>
-          <div className="save">Save $120 annually</div>
+          <div className="save">
+            {annualPricing ? "Saving" : "Save"} $120 annually
+          </div>
         </div>
         <div>
           <h2>Startup</h2>
           <div>
             <div>
               <div className="price">
-                <span>$</span>129
+                <span>$</span>
+                {annualPricing ? 99 : 129}
               </div>
               <div className="time">per month</div>
             </div>
           </div>
-          <div className="save">Save $120 annually</div>
+          <div className="save">
+            {annualPricing ? "Saving" : "Save"} $240 annually
+          </div>
         </div>
         <div>
           <h2>Growth</h2>
           <div>
             <div>
               <div className="price">
-                <span>$</span>329
+                <span>$</span>
+                {annualPricing ? 259 : 329}
               </div>
               <div className="time">per month</div>
             </div>
           </div>
-          <div className="save">Save $120 annually</div>
+          <div className="save">
+            {annualPricing ? "Saving" : "Save"} $840 annually
+          </div>
         </div>
         <div>
           <h2>Enterprise</h2>
@@ -91,30 +111,46 @@ function Pricing() {
       <div className="pricing-table i">
         <div>API</div>
         <div></div>
-        <div>✓</div>
-        <div>✓</div>
-        <div>✓</div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
       </div>
       <div className="pricing-table i">
         <div>Accessibility plugin</div>
         <div></div>
         <div></div>
-        <div>✓</div>
-        <div>✓</div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
       </div>
       <div className="pricing-table i">
         <div>Dedicated support</div>
         <div></div>
         <div></div>
-        <div>✓</div>
-        <div>✓</div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
       </div>
       <div className="pricing-table i">
-        <div>SSO</div>
+        <div>Single Sign On</div>
         <div></div>
         <div></div>
         <div></div>
-        <div>✓</div>
+        <div>
+          <FontAwesomeIcon icon={faCheck} />
+        </div>
       </div>
       <div className="pricing-table b">
         <div></div>
@@ -133,6 +169,6 @@ function Pricing() {
       </div>
     </div>
   );
-}
+};
 
 export default Pricing;
