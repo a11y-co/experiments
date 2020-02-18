@@ -1,8 +1,10 @@
 import React from "react";
+import ReactTooltip from "react-tooltip";
 
 function Pricing() {
   return (
     <div>
+      <ReactTooltip />
       <div className="pricing-table">
         <div>1</div>
         <div>
@@ -58,14 +60,26 @@ function Pricing() {
         <div>Custom</div>
       </div>
       <div className="pricing-table i">
-        <div>Automated audits</div>
+        <div>
+          Automated audits
+          <span
+            className="q"
+            data-tip="We'll scan your webpages every so often automatically"
+          />
+        </div>
         <div>Weekly</div>
         <div>Daily</div>
         <div>Hourly</div>
         <div>Custom</div>
       </div>
       <div className="pricing-table i">
-        <div>Expert audits</div>
+        <div>
+          Expert audits
+          <span
+            className="q"
+            data-tip="Our team of expert consultants will manually audit your site"
+          />
+        </div>
         <div></div>
         <div></div>
         <div>1 per month</div>
