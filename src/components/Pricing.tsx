@@ -1,5 +1,7 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
 
 function Pricing() {
   return (
@@ -47,6 +49,7 @@ function Pricing() {
           <h2>Enterprise</h2>
           <div>
             <div>
+              <FontAwesomeIcon className="icon" icon={faComments} />
               <div className="time">custom pricing</div>
             </div>
           </div>
