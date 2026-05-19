@@ -21,8 +21,8 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node scripts/run-react-scripts.js start",
+    "build": "node scripts/run-react-scripts.js build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
