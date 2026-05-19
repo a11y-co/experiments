@@ -155,16 +155,16 @@ const Pricing = () => {
       <div className="pricing-table b">
         <div></div>
         <div>
-          <a href="#">Start for free</a>
+          <button type="button">Start for free</button>
         </div>
         <div>
-          <a href="#">Start for free &rarr;</a>
+          <button type="button">Start for free &rarr;</button>
         </div>
         <div>
-          <a href="#">Start for free</a>
+          <button type="button">Start for free</button>
         </div>
         <div>
-          <a href="#">Get in touch</a>
+          <button type="button">Get in touch</button>
         </div>
       </div>
     </div>

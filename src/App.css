@@ -64,7 +64,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
-.pricing-table.b a {
+.pricing-table.b a,
+.pricing-table.b button {
   background-color: #0d4248;
   text-decoration: none;
   color: #fff;
@@ -72,7 +73,10 @@
   display: block;
   width: 80%;
   margin: 1rem auto;
+  border: 0;
   border-radius: 0.2rem;
+  cursor: pointer;
+  font: inherit;
 }
 .pricing-table .react-toggle {
   vertical-align: middle;
